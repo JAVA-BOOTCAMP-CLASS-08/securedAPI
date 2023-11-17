@@ -1,4 +1,4 @@
-# Secured API
+# Secured API Rest
 
 ## OpenAPI
 
