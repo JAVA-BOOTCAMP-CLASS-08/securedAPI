@@ -1,0 +1,32 @@
+application:
+  title: Secured API Service
+  version: 1.0
+
+server:
+  servlet:
+    contextPath: /secured
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        enable_lazy_load_no_trans: true
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
